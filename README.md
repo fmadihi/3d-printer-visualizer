@@ -1,75 +1,84 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🖨️ 3D Printer Visualizer
 
-Currently, two official plugins are available:
+An interactive, browser-based control studio for configuring 3D printer settings — bed dimensions, filament materials, thermal profiles, and G-code generation — with a live isometric preview.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built with **React 18**, **TypeScript**, **Vite**, and **Tailwind CSS**.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Isometric Bed Preview** — Real-time 3D-style visualization of the print bed with dynamic dimensions, center/origin markers, and a sample cube rendered in the selected filament color.
+- **Material Presets** — Quick selection of common filaments (PLA, ABS, PETG) with pre-configured safe temperature ranges.
+- **Manual Controls** — Fine-tune bed dimensions (X/Y/Z), nozzle temperature, and heated bed temperature.
+- **Thermal Safety Monitoring** — Live badge warnings when nozzle/bed temperatures fall outside the safe range for the selected material.
+- **Filament Color Swatches** — 8-color palette instantly reflected on the 3D preview.
+- **Export Panel**
+  - Export full printer configuration as JSON
+  - Auto-generate a starter G-code script (`M140`, `M104`, `M190`, `M109`, `G28`, `G29`, `G92`, `G1`)
+  - One-click copy to clipboard
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Category   | Tools |
+|------------|-------|
+| Framework  | React 18 + TypeScript |
+| Build Tool | Vite 5 |
+| Styling    | Tailwind CSS 3 |
+| Tooling    | PostCSS, Autoprefixer |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
+- Node.js 18+
+- npm
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+```bash
+git clone <your-repo-url>
+cd 3d-printer-visualizer
+npm install
 
-```
+### Development
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+bash
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Opens the app locally with hot-reload via Vite.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Production Build
 
-```
+bash
+npm run build
+
+Type-checks with `tsc` then builds an optimized bundle via Vite.
+
+### Preview Production Build
+
+bash
+npm run preview
+
+## 📁 Project Structure
+
+
+src/
+├── components/
+│   ├── ControlPanel.tsx     # Material, dimension, and temperature controls
+│   ├── PrintBed3D.tsx       # Isometric bed/print preview
+│   ├── OutputPanel.tsx      # JSON + G-code export
+│   ├── ThermalBadge.tsx     # Safe temperature range warnings
+│   └── FilamentSwatch.tsx   # Color palette selector
+├── data/
+│   └── materials.ts         # Material presets (PLA, ABS, PETG)
+├── hooks/
+│   └── usePrinterState.ts   # Central printer state logic
+├── types/
+│   └── printer.ts           # Shared TypeScript types
+└── App.tsx
+
+## 📄 License
+
+MIT
+
+
+می‌خوای بخش License رو حذف کنم یا مشخص کنم، و آیا اسکرین‌شات/گیف دمو داری که به README اضافه کنم (باید لینک تصویر رو بدی)؟
