@@ -10,10 +10,10 @@ Built with **React 18**, **TypeScript**, **Vite**, and **Tailwind CSS**.
 
 <!-- Add your screenshot(s) below -->
 <p align="center">
-  <img src="./Pic01.png" alt="3D Printer Visualizer preview" width="800" />
+  <img src="./Pic01.PNG" alt="3D Printer Visualizer preview" width="800" />
 </p>
 <p align="center">
-  <img src="./Pic02.png" alt="3D Printer Visualizer preview" width="800" />
+  <img src="./Pic02.PNG" alt="3D Printer Visualizer preview" width="800" />
 </p>
 ## ✨ Features
 
