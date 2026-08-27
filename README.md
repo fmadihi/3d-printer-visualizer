@@ -15,6 +15,7 @@ Built with **React 18**, **TypeScript**, **Vite**, and **Tailwind CSS**.
 <p align="center">
   <img src="./Pic02.PNG" alt="3D Printer Visualizer preview" width="800" />
 </p>
+
 ## ✨ Features
 
 - **Isometric Bed Preview** — Real-time 3D-style visualization of the print bed with dynamic dimensions, center/origin markers, and a sample cube rendered in the selected filament color.
@@ -90,6 +91,3 @@ src/
 ## 📄 License
 
 MIT
-
-
-فایل رو هم در [sandbox:/mnt/data/README.md](https://gapgpt.app/api/v1/code_interpreter/18083467/1892a65a-e243-4131-85a4-b6b334aa9975/eyJ1c2VyX2lkIjoxODA4MzQ2NywiY2hhdF90b2tlbiI6IjE4OTJhNjVhLWUyNDMtNDEzMS04NWE0LWI2YjMzNGFhOTk3NSIsImZpbGVfcGF0aCI6IlJFQURNRS5tZCJ9:1wzY7o:cV29eioXZlIMT6HmxPTu33lE58-ciwotajIc_CvE73s/README.md) ساختم. تصویر رو در پوشه `screenshots/preview.png` کنار پروژه بگذار (یا مسیر رو در فایل عوض کن) تا در گیت‌هاب نمایش داده شود.
