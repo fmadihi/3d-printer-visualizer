@@ -46,7 +46,7 @@
 // }
 
 // export default App
-import React from 'react';
+// import React from 'react';
 import { usePrinterState } from './hooks/usePrinterState';
 import { PrintBed3D } from './components/PrintBed3D';
 import { ControlPanel } from './components/ControlPanel';
